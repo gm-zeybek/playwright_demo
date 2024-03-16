@@ -1,4 +1,0 @@
-class Homepage extends Basepage{
-
-    
-}
