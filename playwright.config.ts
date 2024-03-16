@@ -37,7 +37,6 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
     headless: false,
-    baseURL: process.env.SE_NODE_GRID_URL,
   },
 
   /* Configure projects for major browsers */
@@ -80,7 +79,7 @@ export default defineConfig({
 
   // /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'npm run start',
+    command: 'yarn run start',
     url: 'http://127.0.0.1:3000',
     reuseExistingServer: !process.env.CI,
   },
