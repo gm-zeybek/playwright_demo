@@ -28,5 +28,8 @@
     "imageName": "playwright-docker",
     "imagePort": "3000",
     "internalContainerPort": "3000"
+  },
+  "dependencies": {
+    "nvm": "^0.0.4"
   }
 }
