@@ -7,7 +7,7 @@
     "test": "playwright test",
     "test:e2e": "playwright test --reporter=html",
     "test-html-report": "playwright test --reporter=html",
-    "start": "npm run build && next start"
+    "start": "npm build && next start"
 
   },
   "keywords": [],
