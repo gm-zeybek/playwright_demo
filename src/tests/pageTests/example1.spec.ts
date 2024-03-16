@@ -20,7 +20,7 @@ import {
 //   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 // });
 
-test.only('get automation testing online', async ({ page }) => {
+test('get automation testing online', async ({ page }) => {
   await page.goto('https://automationintesting.online/');
   // Click the get started link.
   // await page.getByRole('link', { name: 'Get started' }).click();

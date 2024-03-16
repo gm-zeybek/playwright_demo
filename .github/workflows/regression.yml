@@ -1,8 +1,8 @@
-name: "Tests: E2E"
+name: "Tests: Regression"
 on: [pull_request]
 jobs:
-  tests_e2e:
-    name: Run end-to-end tests
+  tests_regression:
+    name: regression tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -11,5 +11,5 @@ jobs:
         run: npm ci
       - name: install playwright browsers
         run: npx playwright install --with-deps
-      - name: npm run test:e2e
-        run: npm run test:e2e=
+      - name: npm run test:regression
+        run: npm run test

@@ -4,11 +4,12 @@
   "description": "playwright_demo",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test",
+    "test": "playwright test --reporter=html",
     "test:e2e": "playwright test --reporter=html",
     "test-html-report": "playwright test --reporter=html",
-    "start": "npm run build && next start"
-
+    "docker:build": "docker build -t muratz/playwright-docker .",
+    "docker:test": "docker run -it muratz/playwright-docker yarn test",
+    "docker:test:e2e": "docker run -it muratz/playwright-docker yarn test:e2e"
   },
   "keywords": [],
   "author": "",
@@ -16,8 +17,19 @@
   "devDependencies": {
     "@playwright/test": "^1.42.1",
     "@types/node": "^20.11.28",
+    "cross-conf-env": "^1.3.0",
+    "npm-run-all": "^4.1.5",
     "playwright": "^1.42.1",
     "toml": "^3.0.0",
     "typescript": "^5.4.2"
+  },
+  "config": {
+    "imageRepo": "muratz/playwright-docker",
+    "imageName": "playwright-docker",
+    "imagePort": "3000",
+    "internalContainerPort": "3000"
+  },
+  "dependencies": {
+    "nvm": "^0.0.4"
   }
 }
