@@ -1,8 +1,12 @@
-{
-  "compilerOptions": {
-    "strict": true,
-    "module": "commonjs"
-  },
-  "include": ["tests"]
-}
 
+{
+    "compilerOptions": {
+      "esModuleInterop": true,                            
+      "baseUrl": ".",                                     
+      "paths": {                                          
+        "@pages/*":["src/components/pages/*"],
+        "@calendars/*":["src/components/calendar/*"],
+      }                             
+    }
+  }
+  
