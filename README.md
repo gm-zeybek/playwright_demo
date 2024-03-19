@@ -110,7 +110,7 @@ yarn playwright install
 yarn run test
 ```
 
-3. For executing API test cases, please provide "ENV" value as "qaApi" or "devApi" :
+3. For executing API test cases :
 
 ```JS
 yarn run test:api
@@ -153,7 +153,7 @@ yarn run test:ui
 13. GitHub Actions is configured in `.github/workflows/playwright.yml` file and events(trigger points) are set to pus/pull actions on master branch. Changes in command to run test cases can be made in "Run tests" section in this file.
 
 
-  ## Docker container
+## Docker container
   14. For running the tests on Docker container we have to first build a image from Dockerfile and then run the image to container on which the test scripts will run.
 
 - build docker image
@@ -172,4 +172,12 @@ yarn run test:ui
 ```JS
  yarn run docker:pull 
 ```
+## Running pipeline and viewing report
+![image](https://github.com/gm-zeybek/playwright_demo/assets/72822629/4dd7678f-547b-4184-8071-a1ae4e605068)
+
+![image](https://github.com/gm-zeybek/playwright_demo/assets/72822629/6c6d6f1b-1554-4075-8328-5b3185c5e199)
+
+![image](https://github.com/gm-zeybek/playwright_demo/assets/72822629/d17ab3dd-0b92-4aa7-a81d-cd7746527164)
+
+
 
